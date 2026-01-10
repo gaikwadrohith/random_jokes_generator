@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 
-#hedd{
+/* #hedd{
     position: absolute;
     margin-top: 175px;
     margin-left: 400px;
-}
+} */
 
 .fonttt {
   font-family: "Playwrite DE SAS", cursive;
@@ -33,9 +33,9 @@
   font-style: normal;
 }
 
-#papa{
+/* #papa{
     height: 100vh;
-}
+} */
 
 #jokes{
     width: 450px;
