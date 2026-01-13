@@ -8,31 +8,63 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-danger-subtle min-vh-100 d-flex flex-column">
 
-    <nav class="p-3">
-        <div id="headd" class="text-center">
-            <h1 class="fonttt fw-bold">
-                Because Even Code Needs a Laugh :)
-            </h1>
+    <header class="p-3">
+        <div>
+            <i class="bi bi-terminal"></i>
+            <p>Laugh.exe</p>
         </div>
-    </nav>
+        <div>
+            <i class="bi bi-gear-wide-connected"></i>
+        </div>
+        <hr class="mx-auto line">
+    </header>
 
-    <section class="flex-grow-1 d-flex justify-content-center align-items-center">
-        <div id="papa" class="d-flex justify-content-center">
-            <div id="jokes" class="shadow-lg p-4 bg-light rounded-3 w-100" style="max-width: 700px;">
-                <h2 id="setup" class="fonttt2 text-start mb-4"></h2>
+    <section class="flex-grow-1 d-flex justify-content-center align-items-center flex-column row-gap-4">
 
-                <div id="footerr" class="d-flex justify-content-between align-items-center flex-wrap gap-3">
-                    <p id="punchline" class="fonttt3 mb-0"></p>
-                    <h2 id="emoji" class="mb-0"></h2>
+        <div class="d-flex flex-column">
+            <h1 class="display-1 fw-medium">Modern Joke Generator</h1>
+            <p class="m-0 h5 text-center">Instance entertainment for the modern developer.</p>
+        </div>
+
+        <div id="papa" class="d-flex justify-content-center h-100">
+
+            <div id="jokes" class="shadow-lg p-4 bg-light rounded-3 w-100 h-100" style="max-width: 700px;">
+                <div class="d-flex justify-content-center align-items-center h-50 my-4">
+                    <h6 class="btn btn-outline-dark rounded-pill m-0 punchline fw-medium" id="headinggg">Programming humor</h6>
+                </div>
+
+                <div>
+                    <h2 id="setup" class="fonttt text-start"></h2>
+                    <p id="punchline" class="fonttt mb-0 punchline"></p>
+                    <hr class="mx-auto line">
+                </div>
+
+                <div id="footerr" class="d-flex p-3 justify-content-between align-items-center">
+                    <div class="d-flex justify-content-center align-items-center column-gap-2">
+                        <p class="d-flex flex-column m-0"><i class="text-center bi bi-copy"></i><span>copy</span></p>
+                        <p class="d-flex flex-column m-0"><i class="bi bi-share text-center"></i><span>share</span></p>
+                        <p class="d-flex flex-column m-0"><i class="bi bi-twitter text-center"></i><span>twit</span></p>
+                    </div>
+                    <div>
+                        <h2 id="emoji" class="mb-0">tt</h2>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="d-flex justify-content-around column-gap-4">
+            <button class="btn btn-outline-dark rounded-pill d-flex gap-1"><i class="bi bi-code"></i><span>Programming</span></button>
+            <button class="btn btn-outline-dark rounded-pill d-flex gap-1"><i class="bi bi-layers"></i><samp>Puns</samp></button>
+            <button class="btn btn-outline-dark rounded-pill d-flex gap-1"><i class="bi bi-flask"></i><span>Science</span></button>
+            <button class="btn btn-outline-dark rounded-pill d-flex gap-1"><i class="bi bi-person"></i><span>Dad jokes</span></button>
+        </div>
+
     </section>
 
     <script src="./script.js"></script>
