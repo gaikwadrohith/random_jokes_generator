@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming Jokes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laugh.exe</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-danger-subtle min-vh-100 d-flex flex-column">
 
-    <header class="p-3">
-        <div>
-            <i class="bi bi-terminal"></i>
-            <p>Laugh.exe</p>
-        </div>
-        <div>
-            <i class="bi bi-gear-wide-connected"></i>
-        </div>
+  <header class="container-fluid py-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex gap-2 align-items-center h4 m-0">
+        <i class="bi bi-terminal text-danger"></i>
+        <span>Laugh.exe</span>
+      </div>
+      <i class="bi bi-gear-wide-connected h4 m-0 setting"></i>
+    </div>
+    <hr class="mx-auto line">
+  </header>
+
+  <main class="flex-grow-1 d-flex flex-column align-items-center justify-content-center gap-4 px-3">
+
+    <div class="text-center">
+      <h1 class="display-4 fw-medium m-0">Modern Joke Generator</h1>
+      <p class="h6 text-muted">Instant entertainment for the modern developer</p>
+    </div>
+
+    <div id="jokes" class="shadow-lg p-4 bg-light rounded-4 w-100" style="max-width: 720px;">
+      <div class="text-center my-3">
+        <h6 class="btn btn-outline-dark rounded-pill punchline fw-medium" id="headinggg"></h6>
+      </div>
+
+      <div class="mb-3">
+        <h2 id="setup" class="fonttt fs-4"></h2>
+        <p id="punchline" class="fonttt punchline mb-0"></p>
         <hr class="mx-auto line">
-    </header>
+      </div>
 
-    <section class="flex-grow-1 d-flex justify-content-center align-items-center flex-column row-gap-4">
-
-        <div class="d-flex flex-column">
-            <h1 class="display-1 fw-medium">Modern Joke Generator</h1>
-            <p class="m-0 h5 text-center">Instance entertainment for the modern developer.</p>
+      <div id="footerr" class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div class="d-flex gap-3 text-center small">
+          <span><i class="bi bi-copy"></i><br>copy</span>
+          <span><i class="bi bi-share"></i><br>share</span>
+          <span><i class="bi bi-twitter"></i><br>tweet</span>
         </div>
+        <h2 id="emoji" class="mb-0"></h2>
+      </div>
+    </div>
 
-        <div id="papa" class="d-flex justify-content-center h-100">
+    <div class="d-flex flex-wrap justify-content-center gap-2 mt-2">
+      <button class="btn btn-outline-dark rounded-pill d-flex gap-1 category-btn" data-cat="Programming">
+        <i class="bi bi-code"></i><span>Programming</span>
+      </button>
+      <button class="btn btn-outline-dark rounded-pill d-flex gap-1 category-btn" data-cat="Science">
+        <i class="bi bi-flask"></i><span>knock-knock</span>
+      </button>
+      <button class="btn btn-outline-dark rounded-pill d-flex gap-1 category-btn" data-cat="Misc">
+        <i class="bi bi-person"></i><span>Dad jokes</span>
+      </button>
+      <button id="newJoke" class="btn btn-dark rounded-pill d-flex gap-1">
+        <i class="bi bi-shuffle"></i><span>New joke</span>
+      </button>
+    </div>
 
-            <div id="jokes" class="shadow-lg p-4 bg-light rounded-3 w-100 h-100" style="max-width: 700px;">
-                <div class="d-flex justify-content-center align-items-center h-50 my-4">
-                    <h6 class="btn btn-outline-dark rounded-pill m-0 punchline fw-medium" id="headinggg">Programming humor</h6>
-                </div>
+  </main>
 
-                <div>
-                    <h2 id="setup" class="fonttt text-start"></h2>
-                    <p id="punchline" class="fonttt mb-0 punchline"></p>
-                    <hr class="mx-auto line">
-                </div>
+  <footer class="py-3 text-center small">
+    <hr class="mx-auto line">
+    <p class="m-0">⚡ 1.2M Jokes Delivered · 👤 45k Happy Users</p>
+    <p class="m-0">© 2026 LAUGH.EXE · MINIMALIST PROGRAMMING</p>
+  </footer>
 
-                <div id="footerr" class="d-flex p-3 justify-content-between align-items-center">
-                    <div class="d-flex justify-content-center align-items-center column-gap-2">
-                        <p class="d-flex flex-column m-0"><i class="text-center bi bi-copy"></i><span>copy</span></p>
-                        <p class="d-flex flex-column m-0"><i class="bi bi-share text-center"></i><span>share</span></p>
-                        <p class="d-flex flex-column m-0"><i class="bi bi-twitter text-center"></i><span>twit</span></p>
-                    </div>
-                    <div>
-                        <h2 id="emoji" class="mb-0">tt</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="d-flex justify-content-around column-gap-4">
-            <button class="btn btn-outline-dark rounded-pill d-flex gap-1"><i class="bi bi-code"></i><span>Programming</span></button>
-            <button class="btn btn-outline-dark rounded-pill d-flex gap-1"><i class="bi bi-layers"></i><samp>Puns</samp></button>
-            <button class="btn btn-outline-dark rounded-pill d-flex gap-1"><i class="bi bi-flask"></i><span>Science</span></button>
-            <button class="btn btn-outline-dark rounded-pill d-flex gap-1"><i class="bi bi-person"></i><span>Dad jokes</span></button>
-        </div>
-
-    </section>
-
-    <script src="./script.js"></script>
+  <script src="./script.js"></script>
 </body>
-
 </html>
