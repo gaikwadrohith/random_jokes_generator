@@ -28,7 +28,7 @@ function fetchJoke() {
         headinggg.textContent = label;
         setup.textContent = joke.setup;
         punchline.textContent = joke.punchline;
-        emoji && (document.getElementById("emoji").innerHTML = emoji.htmlCode[0]);
+        document.getElementById("emoji").innerHTML = emoji.htmlCode[0];
     })
     .catch(console.error);
 }
@@ -41,5 +41,24 @@ document.querySelectorAll(".category-btn").forEach(btn => {
 });
 
 newJoke.addEventListener("click", fetchJoke);
+
+document.querySelector(".bi-copy").parentElement.addEventListener("click", () => {
+    navigator.clipboard.writeText(
+        `${setup.textContent}\n\n${punchline.textContent}`
+    );
+});
+
+document.querySelector(".bi-share").parentElement.addEventListener("click", () => {
+    navigator.share?.({
+        text: `${setup.textContent}\n\n${punchline.textContent}`
+    });
+});
+
+document.querySelector(".bi-twitter").parentElement.addEventListener("click", () => {
+    const text = encodeURIComponent(
+        `${setup.textContent} — ${punchline.textContent}`
+    );
+    window.open(`https://twitter.com/intent/tweet?text=${text}`, "_blank");
+});
 
 fetchJoke();

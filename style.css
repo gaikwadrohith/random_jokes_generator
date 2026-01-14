@@ -21,10 +21,53 @@
   cursor: pointer;
 }
 
+.action-bar {
+  display: flex;
+  gap: 24px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.action-btn i {
+  font-size: 1.3rem;
+}
+
+.action-btn:hover {
+  color: #000;
+}
+
+.setting.action-btn {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.setting.action-btn:hover {
+  transform: rotate(30deg);
+  color: #000;
+}
+
+.setting.action-btn:active {
+  transform: rotate(20deg) scale(0.95);
+}
+
+
 #jokes {
-  transition: all 0.3s ease;
+  transition: all 0.5s ease-in-out;
 }
 
 #headinggg {
-  transition: all 0.3s ease;
+  transition: all 0.5s ease-in-out;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
         <i class="bi bi-terminal text-danger"></i>
         <span>Laugh.exe</span>
       </div>
-      <i class="bi bi-gear-wide-connected h4 m-0 setting"></i>
+      <i class="bi bi-gear-wide-connected m-0 setting action-btn"></i>
     </div>
     <hr class="mx-auto line">
   </header>
@@ -43,9 +44,22 @@
 
       <div id="footerr" class="d-flex justify-content-between align-items-center flex-wrap gap-3">
         <div class="d-flex gap-3 text-center small">
-          <span><i class="bi bi-copy"></i><br>copy</span>
-          <span><i class="bi bi-share"></i><br>share</span>
-          <span><i class="bi bi-twitter"></i><br>tweet</span>
+          <div class="action-bar">
+            <button class="action-btn">
+              <i class="bi bi-copy"></i>
+              <span>Copy</span>
+            </button>
+
+            <button class="action-btn">
+              <i class="bi bi-share"></i>
+              <span>Share</span>
+            </button>
+
+            <button class="action-btn">
+              <i class="bi bi-twitter"></i>
+              <span>Tweet</span>
+            </button>
+          </div>
         </div>
         <h2 id="emoji" class="mb-0"></h2>
       </div>
@@ -56,7 +70,7 @@
         <i class="bi bi-code"></i><span>Programming</span>
       </button>
       <button class="btn btn-outline-dark rounded-pill d-flex gap-1 category-btn" data-cat="Science">
-        <i class="bi bi-flask"></i><span>knock-knock</span>
+        <i class="bi bi-door-open"></i><span>knock-knock</span>
       </button>
       <button class="btn btn-outline-dark rounded-pill d-flex gap-1 category-btn" data-cat="Misc">
         <i class="bi bi-person"></i><span>Dad jokes</span>
@@ -70,10 +84,12 @@
 
   <footer class="py-3 text-center small">
     <hr class="mx-auto line">
-    <p class="m-0">⚡ 1.2M Jokes Delivered · 👤 45k Happy Users</p>
-    <p class="m-0">© 2026 LAUGH.EXE · MINIMALIST PROGRAMMING</p>
+    <p class="m-0"><i class="bi bi-lightning-charge-fill"> </i> 1.2M Jokes Delivered · <i class="bi bi-person-fill">
+      </i> 45k Happy Users</p>
+    <p class="m-0"><i class="bi bi-c-circle"></i> 2026 LAUGH.EXE · MINIMALIST PROGRAMMING</p>
   </footer>
 
   <script src="./script.js"></script>
 </body>
+
 </html>
