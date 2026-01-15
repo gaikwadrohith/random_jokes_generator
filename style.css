@@ -4,8 +4,12 @@
   box-sizing: border-box;
 }
 
+#heartIcon.saved {
+  color: #e11d48;
+}
+
 .line {
-  width: 75%;
+  width: 90%;
 }
 
 .punchline {
@@ -21,6 +25,24 @@
   cursor: pointer;
 }
 
+#jokes {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+#setup,
+#punchline,
+#headinggg,
+#emoji {
+  transition: opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1), transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .action-bar {
   display: flex;
   gap: 24px;
@@ -29,7 +51,6 @@
 .action-btn {
   background: none;
   border: none;
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,37 +58,69 @@
   font-size: 0.85rem;
   color: #555;
   cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .action-btn i {
   font-size: 1.3rem;
+  transition: transform 0.25s ease;
 }
 
 .action-btn:hover {
+  transform: translateY(-2px);
   color: #000;
+}
+
+.action-btn:hover i {
+  transform: scale(1.15);
+}
+
+.action-btn:active {
+  transform: scale(0.92);
 }
 
 .setting.action-btn {
   font-size: 1.6rem;
-  cursor: pointer;
-  color: #333;
-  transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .setting.action-btn:hover {
   transform: rotate(30deg);
-  color: #000;
 }
 
 .setting.action-btn:active {
   transform: rotate(20deg) scale(0.95);
 }
 
-
-#jokes {
-  transition: all 0.5s ease-in-out;
+.category-btn.active {
+  background-color: #000;
+  color: #fff;
 }
 
-#headinggg {
-  transition: all 0.5s ease-in-out;
+.category-btn,
+#newJoke {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.category-btn:hover,
+#newJoke:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.category-btn:active,
+#newJoke:active {
+  transform: scale(0.94);
+}
+
+#emoji-wall {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.emoji-item {
+  position: absolute;
+  opacity: 0.35;
+  transition: top 1.8s cubic-bezier(0.4, 0, 0.2, 1), left 1.8s cubic-bezier(0.4, 0, 0.2, 1), transform 1.8s cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -24,72 +24,110 @@
     <hr class="mx-auto line">
   </header>
 
-  <main class="flex-grow-1 d-flex flex-column align-items-center justify-content-center gap-4 px-3">
+  <div class="container-fluid flex-grow-1 d-flex gap-4 px-3">
 
-    <div class="text-center">
-      <h1 class="display-4 fw-medium m-0">Modern Joke Generator</h1>
-      <p class="h6 text-muted">Instant entertainment for the modern developer</p>
-    </div>
+    <main class="flex-grow-1 d-flex flex-column align-items-center justify-content-center gap-4 px-3">
 
-    <div id="jokes" class="shadow-lg p-4 bg-light rounded-4 w-100" style="max-width: 720px;">
-      <div class="text-center my-3">
-        <h6 class="btn btn-outline-dark rounded-pill punchline fw-medium" id="headinggg"></h6>
+      <div class="text-center">
+        <h1 class="display-4 fw-medium m-0">Modern Joke Generator</h1>
+        <p class="h6 text-muted">Instant entertainment for the modern developer</p>
       </div>
 
-      <div class="mb-3">
-        <h2 id="setup" class="fonttt fs-4"></h2>
-        <p id="punchline" class="fonttt punchline mb-0"></p>
-        <hr class="mx-auto line">
-      </div>
+      <div id="jokes" class="shadow-lg p-4 bg-light rounded-4 w-100" style="max-width:720px;">
+        <div class="text-center my-3">
+          <h6 class="btn btn-outline-dark rounded-pill punchline fw-medium" id="headinggg"></h6>
+        </div>
 
-      <div id="footerr" class="d-flex justify-content-between align-items-center flex-wrap gap-3">
-        <div class="d-flex gap-3 text-center small">
+        <div class="mb-3">
+          <h2 id="setup" class="fonttt fs-4 text-danger-emphasis"></h2>
+          <p id="punchline" class="fonttt punchline mb-0"></p>
+          <hr class="mx-auto line">
+        </div>
+
+        <div id="footerr" class="d-flex justify-content-between align-items-center flex-wrap gap-3">
           <div class="action-bar">
-            <button class="action-btn">
+            <button class="action-btn" aria-label="Copy joke">
               <i class="bi bi-copy"></i>
-              <span>Copy</span>
+              <span id="cpytxt">Copy</span>
             </button>
-
-            <button class="action-btn">
+            <button class="action-btn" aria-label="Share joke">
               <i class="bi bi-share"></i>
               <span>Share</span>
             </button>
-
-            <button class="action-btn">
-              <i class="bi bi-twitter"></i>
+            <button class="action-btn" aria-label="Tweet joke">
+              <i class="bi bi-twitter bi-twitter-x"></i>
               <span>Tweet</span>
             </button>
+            <button class="action-btn" id="saveJoke" aria-label="Save joke">
+              <i class="bi bi-heart" id="heartIcon"></i>
+              <span id="saveTxt">Save</span>
+            </button>
+            <button class="action-btn" id="viewSaved">
+              <i class="bi bi-collection" id="savedIcon"></i>
+              <span>Saved</span>
+            </button>
           </div>
+          <h2 id="emoji" class="mb-0"></h2>
         </div>
-        <h2 id="emoji" class="mb-0"></h2>
       </div>
-    </div>
 
-    <div class="d-flex flex-wrap justify-content-center gap-2 mt-2">
-      <button class="btn btn-outline-dark rounded-pill d-flex gap-1 category-btn" data-cat="Programming">
-        <i class="bi bi-code"></i><span>Programming</span>
-      </button>
-      <button class="btn btn-outline-dark rounded-pill d-flex gap-1 category-btn" data-cat="Science">
-        <i class="bi bi-door-open"></i><span>knock-knock</span>
-      </button>
-      <button class="btn btn-outline-dark rounded-pill d-flex gap-1 category-btn" data-cat="Misc">
-        <i class="bi bi-person"></i><span>Dad jokes</span>
-      </button>
-      <button id="newJoke" class="btn btn-dark rounded-pill d-flex gap-1">
-        <i class="bi bi-shuffle"></i><span>New joke</span>
-      </button>
-    </div>
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-2">
+        <button class="btn btn-outline-dark rounded-pill d-flex gap-1 category-btn active" data-cat="Programming">
+          <i class="bi bi-code"></i><span>Programming</span>
+        </button>
+        <button class="btn btn-outline-dark rounded-pill d-flex gap-1 category-btn" data-cat="Science">
+          <i class="bi bi-door-open"></i><span>Knock-knock</span>
+        </button>
+        <button class="btn btn-outline-dark rounded-pill d-flex gap-1 category-btn" data-cat="Misc">
+          <i class="bi bi-person"></i><span>Dad jokes</span>
+        </button>
+        <button id="newJoke" class="btn btn-dark rounded-pill d-flex gap-1">
+          <i class="bi bi-shuffle"></i><span>New joke</span>
+        </button>
+      </div>
 
-  </main>
+    </main>
+
+    <aside class="d-none d-lg-block bg-transparent" style="width:320px;">
+      <div class="border border-1 border-dark rounded-2 p-3 pb-0">
+        <div>
+          <h3 class="mb-3">
+            <i class="bi bi-info-circle"></i> Instructions
+          </h3>
+          <p><i class="bi bi-arrow-return-right"></i> Jokes refresh automatically</p>
+          <p><i class="bi bi-arrow-return-right"></i> Click New Joke or press N</p>
+          <p><i class="bi bi-arrow-return-right"></i> Switch using 1 / 2 / 3</p>
+          <p><i class="bi bi-arrow-return-right"></i> Tap the heart to save</p>
+          <p><i class="bi bi-arrow-return-right"></i> Use Saved to view</p>
+          <p><i class="bi bi-arrow-return-right"></i> Copy, Share, or Tweet</p>
+          <p><i class="bi bi-arrow-return-right"></i> Hover card to pause</p>
+        </div>
+        <div>
+          <h3>
+            <i class="bi bi-people"></i> About Laugh.exe
+          </h3>
+          <p class="m-0">
+            <span>
+              Laugh.exe is a simple and fun joke generator made for anyone who enjoys a quick laugh.
+              It's designed to be easy, smooth, and enjoyable to use—perfect for light moments anytime.
+            </span>
+          <p class="fw-medium text-end my-2">— Rohit Gaikwad</p>
+          </p>
+        </div>
+      </div>
+    </aside>
+  </div>
 
   <footer class="py-3 text-center small">
     <hr class="mx-auto line">
-    <p class="m-0"><i class="bi bi-lightning-charge-fill"> </i> 1.2M Jokes Delivered · <i class="bi bi-person-fill">
-      </i> 45k Happy Users</p>
+    <p class="m-0"><i class="bi bi-lightning-charge-fill"></i> 1.2M Jokes Delivered · <i class="bi bi-person-fill"></i>
+      45k Happy Users</p>
     <p class="m-0"><i class="bi bi-c-circle"></i> 2026 LAUGH.EXE · MINIMALIST PROGRAMMING</p>
   </footer>
 
-  <script src="./script.js"></script>
+  <div id="emoji-wall"></div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
