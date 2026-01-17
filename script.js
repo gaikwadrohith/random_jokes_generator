@@ -78,7 +78,7 @@ const fetchJoke = () => {
 
 const restartAuto = () => {
   clearInterval(autoJoke);
-  autoJoke = setInterval(fetchJoke, 90000);
+  autoJoke = setInterval(fetchJoke, 10000);
 };
 
 document.querySelectorAll(".category-btn").forEach(btn =>
